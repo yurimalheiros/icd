@@ -1,6 +1,6 @@
 # Introdução à Ciência de Dados
 
-Disciplina de introdução à ciência de dados da Universidade Federal da Paraíba.
+Repositório da disciplina de introdução à ciência de dados da Universidade Federal da Paraíba.
 
 ## Notebooks
 
