@@ -1,5 +1,7 @@
 # Introdução à Ciência de Dados
 
+Disciplina de introdução à ciência de dados da Universidade Federal da Paraíba.
+
 ## Notebooks
 
 Notebooks usados nas aulas:
