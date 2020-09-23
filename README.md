@@ -13,3 +13,4 @@ Notebooks usados nas aulas:
 ## Exercícios
 
 - [Python - Listas](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Python%20-%20Listas.ipynb) ([Solução](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Python%20-%20Listas%20-%20Solução.ipynb))
+- [Python - Random](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Python%20-%20Random.ipynb)
