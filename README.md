@@ -9,6 +9,8 @@ Repositório da disciplina de introdução à ciência de dados da Universidade 
 - [Python - Listas](https://github.com/yurimalheiros/icd/blob/master/Python%20-%20Listas.ipynb)
 - [Python - Strings](https://github.com/yurimalheiros/icd/blob/master/Python%20-%20Strings.ipynb)
 - [Python - Random](https://github.com/yurimalheiros/icd/blob/master/Python%20-%20Random.ipynb)
+- [NumPy](https://github.com/yurimalheiros/icd/blob/master/NumPy.ipynb)
+- [Pandas](https://github.com/yurimalheiros/icd/blob/master/Pandas.ipynb)
 
 ## Exercícios
 
