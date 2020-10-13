@@ -19,3 +19,4 @@ Repositório da disciplina de introdução à ciência de dados da Universidade 
 - [NumPy](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20NumPy.ipynb)
 - [Pandas](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Pandas.ipynb)
 - [Centralidade e Dispersão](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Medidas%20de%20Centralidade%20e%20Dispersão.ipynb)
+- [Correlação](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Correlação.ipynb)
