@@ -12,6 +12,7 @@ Repositório da disciplina de introdução à ciência de dados da Universidade 
 - [NumPy](https://github.com/yurimalheiros/icd/blob/master/NumPy.ipynb)
 - [Pandas](https://github.com/yurimalheiros/icd/blob/master/Pandas.ipynb)
 - [Elo Ranking](https://github.com/yurimalheiros/icd/blob/master/Elo%20Ranking.ipynb)
+- [Visualização de Dados](https://github.com/yurimalheiros/icd/blob/master/Visualização%20de%20Dados.ipynb)
 
 ## Exercícios
 
