@@ -13,6 +13,7 @@ Repositório da disciplina de introdução à ciência de dados da Universidade 
 - [Pandas](https://github.com/yurimalheiros/icd/blob/master/Pandas.ipynb)
 - [Elo Ranking](https://github.com/yurimalheiros/icd/blob/master/Elo%20Ranking.ipynb)
 - [Visualização de Dados](https://github.com/yurimalheiros/icd/blob/master/Visualização%20de%20Dados.ipynb)
+- [Limpeza e Transformação de Dados](https://github.com/yurimalheiros/icd/blob/master/Limpeza%20e%20Transformação%20de%20Dados.ipynb)
 
 ## Exercícios
 
