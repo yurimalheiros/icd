@@ -25,7 +25,7 @@
 - git merge [nome_branch] - Faz com que mescle as moficações de uma branch na branch atual </br> 
 - git restore - Restaura os ultimo arquivos não commitados </br>
 - git reset --soft [commitId] - volta para o estagio antes do commit </br>
-- git reset --mixer [commitId] - Volra oos itens antes do staged (antes do git add) </br>
+- git reset --mixer [commitId] - Volra os itens antes do staged (antes do git add) </br>
 - git reset --hard [commitId] - Volta para os antigos arquivos e apaga as alterações realizadas </br>
 - git restore --staged [fileName] - Retira o arquivo do staged </br>
 - git commit --amend -m "[mensagem]" - Junta o commit com o commit anterior
