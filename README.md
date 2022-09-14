@@ -2,7 +2,7 @@
 
 Repositório da disciplina de Introdução à Ciência de Dados do Centro de Informática da Universidade Federal da Paraíba.
 
-Semestre atual: 2021.2
+Semestre atual: 2022.1
 
 
 ## Notebooks
