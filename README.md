@@ -1,6 +1,6 @@
 # Introdução à Ciência de Dados
 
-Repositório da disciplina de Introdução à Ciência de Dados do Centro de Informática da Universidade Federal da Paraíba.
+Repositório da disciplina de Introdução à Ciência de Dados do Centro de Informática da UFPB.
 
 Semestre atual: 2022.1
 
