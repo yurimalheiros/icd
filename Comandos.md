@@ -1,10 +1,10 @@
 ### Comandos 
 - mkdir [nome_pasta] - criar uma pasta
-- ls - apresentar os diretorios (pastas) 
-- git init - Inicializa um repositorio 
+- ls - apresentar os arquivos e os diretórios (pastas) 
+- git init - inicializa um repositório 
 - cd .. - sai da pasta 
 - cd [nome_da_pasta] - entra em uma pasta 
-- ls -lf - apresenta arquivos ocultos 
+- ls -lf - apresenta arquivos incluindo os ocultos 
 - ls [nome_arquivo/pasta] - apresenta arquivos em uma pasta 
 - touch [nome_arquivo] - cria um arquivo vazio 
 - git status - apresenta o status do repositorio 
@@ -15,14 +15,14 @@
 - git log - observar os commits realizados no projeto 
 - git clone [link_github] - para clonar o projeto do github na pasta selecionada 
 - git log --oneline --all - versão simplificada do log 
-- cod . - abre o vscode 
+- code . - abre o vscode 
 - git push origin (para onde será enviado; origin = repositorio do git) master (o que sera enviado; master = seu repositorio local) 
 - git pull origin master - recebe as atualizações do repositorio 
-- git branch [nome_bransh] - Cria uma branch 
+- git branch [nome_branch] - Cria uma branch 
 - git branch - Mostra as branchs 
 - git checkout [nome_branch] - Vai para outra branch 
 - git checkout -b [nome_branch] - Tambem cria uma branch, mas ele ja muda para a branch criada 
-- git merge [nome_branch] - Faz com que mescle as moficações de uma branch na branch atual  
+- git merge [nome_branch] - Faz com que mescle as modificações de uma branch na branch atual  
 - git restore - Restaura os ultimo arquivos não commitados 
 - git reset --soft [commitId] - volta para o estagio antes do commit 
 - git reset --mixer [commitId] - Volra os itens antes do staged (antes do git add) 
