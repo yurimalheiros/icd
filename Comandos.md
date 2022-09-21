@@ -23,7 +23,7 @@
 - git checkout [nome_branch] - Vai para outra branch 
 - git checkout -b [nome_branch] - Tambem cria uma branch, mas ele ja muda para a branch criada 
 - git merge [nome_branch] - Faz com que mescle as modificações de uma branch na branch atual  
-- git restore - Restaura os ultimo arquivos não commitados 
+- git restore - Restaura os último arquivos não commitados 
 - git reset --soft [commitId] - volta para o estagio antes do commit 
 - git reset --mixer [commitId] - Volra os itens antes do staged (antes do git add) 
 - git reset --hard [commitId] - Volta para os antigos arquivos e apaga as alterações realizadas 
