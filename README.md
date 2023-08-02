@@ -1,6 +1,6 @@
 # Introdução à Ciência de Dados
 
-Repositório da disciplina de Introdução à Ciência de Dados (ICD) do Centro de Informática (CI) da Universidade Federal da Paraíba (UFPB).
+Repositório da disciplina de **Introdução à Ciência de Dados** (ICD) do Centro de Informática (CI) da Universidade Federal da Paraíba (UFPB).
 
 Semestre atual: 2023.1
 
