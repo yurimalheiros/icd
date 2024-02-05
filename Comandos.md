@@ -23,7 +23,7 @@
 - git branch - Mostra as branchs 
 - git checkout [nome_branch] - Vai para outra branch 
 - git checkout -b [nome_branch] - Tambem cria uma branch, mas ele ja muda para a branch criada
-- git branch -d [nome_branch] - Remove a branch
+- git branch -d [nome_branch] - Remove a branch com nome nome_branch
 - git merge [nome_branch] - Faz com que mescle as modificações de uma branch na branch atual  
 - git restore - Restaura os último arquivos não commitados 
 - git reset --soft [commitId] - Volta para o estagio antes do commit 
