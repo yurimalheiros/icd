@@ -13,6 +13,7 @@
 - git diff - Apresenta as mudanças 
 - git commit -m "[mensagem]" - Confirma a modificação dos arquivos 
 - git log - Observar os commits realizados no projeto 
+- git show [id_commit] - Exibe as mudanças do commit
 - git clone [link_github] - Para clonar o projeto do github na pasta selecionada 
 - git log --oneline --all - Versão simplificada do log 
 - code . - Abre o vscode 
@@ -21,7 +22,8 @@
 - git branch [nome_branch] - Cria uma branch 
 - git branch - Mostra as branchs 
 - git checkout [nome_branch] - Vai para outra branch 
-- git checkout -b [nome_branch] - Tambem cria uma branch, mas ele ja muda para a branch criada 
+- git checkout -b [nome_branch] - Tambem cria uma branch, mas ele ja muda para a branch criada
+- git branch -d [nome_branch] - Remove a branch
 - git merge [nome_branch] - Faz com que mescle as modificações de uma branch na branch atual  
 - git restore - Restaura os último arquivos não commitados 
 - git reset --soft [commitId] - Volta para o estagio antes do commit 
