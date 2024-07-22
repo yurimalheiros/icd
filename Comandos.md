@@ -2,7 +2,7 @@
 - mkdir [nome_pasta] - Criar uma pasta
 - ls - Apresentar os arquivos e os diretórios (pastas) 
 - git init - Inicializa um repositório 
-- cd .. - Sai da pasta 
+- cd .. - Muda para a pasta pai
 - cd [nome_da_pasta] - Entra em uma pasta 
 - ls -lf - Apresenta arquivos incluindo os ocultos 
 - ls [nome_arquivo/pasta] - Apresenta arquivos em uma pasta 
@@ -16,9 +16,9 @@
 - git show [id_commit] - Exibe as mudanças do commit
 - git clone [link_github] - Para clonar o projeto do github na pasta selecionada 
 - git log --oneline --all - Versão simplificada do log 
-- code . - Abre o vscode 
+- code . - Abre o vscode na pasta atual
 - git push origin (para onde será enviado; origin = repositorio do git) master (o que sera enviado; master = seu repositorio local) 
-- git pull origin master - Recebe as atualizações do repositorio 
+- git pull origin master - Recebe as atualizações do repositorio da branch master
 - git branch [nome_branch] - Cria uma branch 
 - git branch - Mostra as branchs 
 - git checkout [nome_branch] - Vai para outra branch 
