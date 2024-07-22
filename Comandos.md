@@ -16,7 +16,7 @@
 - git show [id_commit] - Exibe as mudanças do commit
 - git clone [link_github] - Para clonar o projeto do github na pasta selecionada 
 - git log --oneline --all - Versão simplificada do log 
-- code . - Abre o vscode na pasta atual
+- code . - Abre o VSCode na pasta atual
 - git push origin (para onde será enviado; origin = repositorio do git) master (o que sera enviado; master = seu repositorio local) 
 - git pull origin master - Recebe as atualizações do repositorio da branch master
 - git branch [nome_branch] - Cria uma branch 
