@@ -31,4 +31,4 @@ Semestre atual: 2024.2
 
 ## Projetos
 
-Em breve...
+Em breve... esse semestre vai ser diferente
