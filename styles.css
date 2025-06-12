@@ -1,0 +1,108 @@
+/* Estilos para os cards de categoria */
+.category-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Estilos para os cards de tópicos */
+.topic-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.topic-card:hover {
+    border-left-color: #05202b;
+    transform: translateX(5px);
+}
+
+/* Classe utilitária para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Animação de fade in */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Estilo do botão de voltar */
+.back-button {
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0369a1;
+}
+
+/* Estilo do modal */
+.modal {
+    backdrop-filter: blur(5px);
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+    .category-card {
+        margin-bottom: 1rem;
+    }
+    
+    .back-button {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    #project-modal .bg-white {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
+}
+
+/* Melhorias visuais */
+.topic-card .bg-blue-600 {
+    transition: background-color 0.3s ease;
+}
+
+.topic-card .bg-blue-600:hover {
+    background-color: #1d4ed8;
+}
+
+/* Estilo para tags de ferramentas */
+.tool-tag {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin: 0.125rem;
+}
+
+/* Scroll suave para elementos internos do modal */
+#modal-content {
+    scroll-behavior: smooth;
+}
+
+/* Melhor aparência para listas */
+#modal-content ul {
+    padding-left: 1rem;
+}
+
+#modal-content li {
+    margin-bottom: 0.5rem;
+}

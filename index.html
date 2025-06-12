@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introdução à Ciência de Dados - UFPB</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-100">
@@ -21,11 +22,12 @@
             <nav class="mt-4">
                 <ul class="flex justify-center space-x-4">
                     <li><a href="#informacoes" class="hover:text-gray-300">Informações Gerais</a></li>
-                    <li><a href="#trabalhos" class="hover:text-gray-300">Trabalhos Finais</a></li>
+                    <li><a href="#trabalhos" class="hover:text-gray-300">Trabalhos dos Alunos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main class="container mx-auto px-4 py-8">
         <section id="informacoes" class="mb-12">
             <h2 class="text-2xl font-semibold mb-4">Informações Gerais</h2>
@@ -36,37 +38,127 @@
         </section>
 
         <section id="trabalhos">
-            <h2 class="text-2xl font-semibold mb-4">Trabalhos Finais dos Alunos</h2>
-            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-bold mb-2">Projeto 1</h3>
-                    <p>
-                        Descrição breve do projeto desenvolvido. Detalhes sobre o tema, metodologia e resultados
-                        alcançados podem ser apresentados aqui.
-                    </p>
+            <!-- Navegação de Breadcrumb -->
+            <nav class="mb-6">
+                <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                    <li><a href="#" id="breadcrumb-home" class="hover:text-blue-600">Trabalhos dos Alunos</a></li>
+                    <li id="breadcrumb-category" class="hidden"><span class="mx-2">/</span><span class="text-gray-800"></span></li>
+                </ol>
+            </nav>
+
+            <!-- Seção de Categorias -->
+            <div id="categories-section">
+                <h2 class="text-2xl font-semibold mb-6">Categorias dos projetos</h2>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="esportes">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">⚽</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Esportes</h3>
+                        <p class="text-gray-600 text-center">
+                            Análises de dados esportivos incluindo futebol, NBA e muito mais.
+                        </p>
+                    </div>
+                    
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="entretenimento">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">🎬</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Entretenimento</h3>
+                        <p class="text-gray-600 text-center">
+                            Estudos sobre várias áreas do entretenimento como o Oscar.
+                        </p>
+                    </div>
+                    
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="musica">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">🎵</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Música</h3>
+                        <p class="text-gray-600 text-center">
+                            Análises sobre músicas, artistas e sons de guitarra.
+                        </p>
+                    </div>
+                    
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="social">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">👥</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Social</h3>
+                        <p class="text-gray-600 text-center">
+                            Análises sobre aspectos sociais da sociedade e comunidades.
+                        </p>
+                    </div>
+                    
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="outros">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">📊</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Outros</h3>
+                        <p class="text-gray-600 text-center">
+                            Análises e dados sobre docentes, documentos e temas diversos.
+                        </p>
+                    </div>
+                    
+                    <div class="category-card bg-white shadow-md rounded-lg p-6" data-category="educacao">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-center">Educação</h3>
+                        <p class="text-gray-600 text-center">
+                            Dados educacionais e análises acadêmicas.
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-bold mb-2">Projeto 2</h3>
-                    <p>
-                        Resumo do projeto: objetivos, técnicas utilizadas e principais conclusões do trabalho final.
-                    </p>
+            </div>
+
+            <!-- Seção de Tópicos -->
+            <div id="topics-section" class="hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-semibold" id="category-title"></h2>
+                    <button id="back-to-categories" class="back-button bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        ← Voltar às Categorias
+                    </button>
                 </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-bold mb-2">Projeto 3</h3>
-                    <p>
-                        Descrição do projeto, destacando o processo de análise de dados e os insights obtidos.
-                    </p>
+                <div id="topics-grid" class="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
+                    <!-- Tópicos serão inseridos aqui via JavaScript -->
                 </div>
-                <!-- Adicione mais cards conforme necessário -->
             </div>
         </section>
     </main>
+
+    <!-- Modal para exibir detalhes do projeto -->
+    <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+            </div>
+            <div id="modal-content" class="p-6">
+                <!-- Conteúdo do projeto será inserido aqui -->
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto px-4 text-center">
             <p>© 2025 UFPB - Introdução à Ciência de Dados</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
