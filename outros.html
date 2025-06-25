@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social - Introdução à Ciência de Dados - UFPB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100" data-category="outros">
+    <header class="bg-[#05202b] text-white py-6">
+        <div class="container mx-auto px-4">
+            <img src="https://www.ufpb.br/ci/contents/imagens/site/logo-ci.jpeg/@@images/272a7efd-9733-48f8-b07a-c270651ee058.jpeg"
+                alt="Logo CI" class="w-16 h-16 object-cover rounded mb-4">
+        </div>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold">Introdução à Ciência de Dados</h1>
+            <p class="mt-2">Prof. Dr. Yuri Malheiros</p>
+            <p class="mt-2">Departamento de Computação Científica - Universidade Federal da Paraíba</p>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="index.html" class="hover:text-gray-300">Página Inicial</a></li>
+                    <li><a href="index.html#informacoes" class="hover:text-gray-300">Informações Gerais</a></li>
+                    <li><a href="index.html#trabalhos" class="hover:text-gray-300">Todas as Categorias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Navegação de Breadcrumb -->
+        <nav class="mb-6">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-600">Início</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li><a href="index.html#trabalhos" class="hover:text-blue-600">Trabalhos dos Alunos</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li id="breadcrumb-category" class="text-gray-800">Outros</li>
+            </ol>
+        </nav>
+
+        <section>
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2" id="category-title">Outros</h2>
+                    <p class="text-gray-600">Análises de dados de variadas áreas.</p>
+                </div>
+                <a href="index.html#trabalhos" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    ← Voltar às Categorias
+                </a>
+            </div>
+            
+            <div id="topics-grid" class="grid gap-4 md:grid-cols-2 lg:grid-cols-1">
+                <!-- Tópicos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para exibir detalhes do projeto -->
+    <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+            </div>
+            <div id="modal-content" class="p-6">
+                <!-- Conteúdo do projeto será inserido aqui -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 UFPB - Introdução à Ciência de Dados</p>
+        </div>
+    </footer>
+
+    <!-- Importar dados dos projetos e script da categoria -->
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+</body>
+
+</html>

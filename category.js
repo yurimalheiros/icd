@@ -94,6 +94,9 @@ function showProjectModal(topic) {
     if (!modal || !modalTitle || !modalContent) return;
     
     modalTitle.textContent = topic.title;
+
+    const dados = topic.content?.dados || 'Dados não informados';
+    const analise = topic.content?.analise || 'Análise não informada';
     
     modalContent.innerHTML = `
         <div class="space-y-6">
@@ -104,12 +107,12 @@ function showProjectModal(topic) {
             
             <div>
                 <h4 class="font-semibold text-lg mb-2">Dados</h4>
-                <p class="text-gray-700">${topic.dados}</p>
+                <p class="text-gray-700">${dados}</p>
             </div>
 
             <div>
                 <h4 class="font-semibold text-lg mb-2">Analise feita</h4>
-                <p class="text-gray-700">${topic.analise}</p>
+                <p class="text-gray-700">${analise}</p>
             </div>
         </div>
     `;
