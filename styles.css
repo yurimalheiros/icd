@@ -9,18 +9,6 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Estilos para os cards de tópicos */
-.topic-card {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border-left: 4px solid transparent;
-}
-
-.topic-card:hover {
-    border-left-color: #05202b;
-    transform: translateX(5px);
-}
-
 /* Classe utilitária para ocultar elementos */
 .hidden {
     display: none;

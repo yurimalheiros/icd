@@ -6,19 +6,19 @@ const projectsData = {
             {
                 title: "Futebol",
                 description: "Dados e Análise do brasileirão",
-                author: "nome do autor",
+                author: "Dennynson Scheydt| Matias Monteiro | Vinícius da Silva | João Matheus ",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/Matiasply/data-set-brasileirao/blob/master/brasileirao_2006_2024.csv",
+                    analise: "https://github.com/Matiasply/data-set-brasileirao/blob/master/relatorio.ipynb",
                 }
             },
             {
                 title: "NBA",
                 description: "Dados e Análise da NBA",
-                author: "nome do autor",
+                author: "Vinicius Ferraz | João Pedro | Samuel Victor",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/Cigilo/Coleta-de-dados-nba/blob/main/NBA_Temporada_2024.xlsx",
+                    analise: "https://github.com/Cigilo/Coleta-de-dados-nba/blob/main/relatorio.ipynb",
                 }
             },
         ]
@@ -41,22 +41,22 @@ const projectsData = {
         title: "Música",
         topics: [
             {
-                title: "Música",
+                title: "Música populares",
                 description: "Dados e Análise sobre músicas e artistas",
-                author: "nome do autor",
+                author: "Irlan Miguel | José Victor | Labert Paixão",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/laberttt/Music-Data-Analytics/tree/main/dataset",
+                    analise: "https://github.com/laberttt/Music-Data-Analytics/blob/main/presentation.ipynb",
                 }
             },
 
             {
                 title: "Guitarra",
                 description: "Dados e Análise sobre sons de guitarra",
-                author: "nome do autor",
+                author: "Pedro Henrique | Igor de Melo | Erick Batista | João Vitor",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/PKrutaa/MusicData/blob/main/dataset_com_features.csv",
+                    analise: "https://github.com/PKrutaa/MusicData/blob/main/relat%C3%B3rio.ipynb",
                 }
 
             }
@@ -70,10 +70,10 @@ const projectsData = {
             {
                 title: "comunidade trans na paraíba",
                 description: "Dados e Análise sobre a comunidade trans na Paraíba",
-                author: "nome do autor",
+                author: "Eva Maria",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://drive.google.com/drive/folders/1ao_2Pih-YwhrOjCjcVPPZwfiixFk8f_p",
+                    analise: "https://github.com/evam4ria/projeto-icd2024/tree/main",
                 }
             }
         ]
@@ -85,20 +85,20 @@ const projectsData = {
             {
                 title: "Dados academicos dos docentes do centro de informática",
                 description: "Dados e Análise sobre docentes do centro de informática da UFPB",
-                author: "nome do autor",
+                author: "Clarice Lopes, Felipe Medeiros, Vinícius Mangueira",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/claricelopes/dados_coleta/tree/main/captura_dados",
+                    analise: "https://github.com/claricelopes/dados_coleta/blob/main/relatorio.ipynb",
                 }
             },
 
             {
                 title: "Documentos",
                 description: "Dados e Análise sobre Documentos",
-                author: "nome do autor",
+                author: "Anne Fernandes | Matheus da Silva | Thiago Henrique",
                 content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
+                    dados: "https://github.com/thiag0bezerra/docai/blob/master/data/processed/dataset.csv",
+                    analise: "https://github.com/thiag0bezerra/docai/blob/master/relatorio.ipynb",
                 }
             }
 
