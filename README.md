@@ -2,7 +2,7 @@
 
 Repositório da disciplina de Introdução à Ciência de Dados do CI da UFPB.
 
-Semestre atual: 2024.2
+Semestre atual: 2025.1
 
 
 ## Notebooks
