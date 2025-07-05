@@ -31,19 +31,20 @@ function updatePageContent(categoryData) {
     const topicsGrid = document.getElementById('topics-grid');
     if (topicsGrid) {
         topicsGrid.innerHTML = '';
-        categoryData.topics.forEach(topic => {
-            const topicCard = createTopicCard(topic);
+        const categoryName = document.body.dataset.category;
+        categoryData.topics.forEach((topic, index) => {
+            const topicCard = createTopicCard(topic, index, categoryName);
             topicsGrid.appendChild(topicCard);
         });
     }
 }
 
-function createTopicCard(topic) {
+function createTopicCard(topic, topicIndex, categoryName) {
     const card = document.createElement('div');
     card.className = 'bg-white shadow-md rounded-lg p-6 mb-4';
 
     const dadosLink = topic.content?.dados || '';
-    const analiseLink = topic.content?.analise || '';
+    const analiseLink = topic.content?.analise || topic.content?.apresentacoes || '';
 
     card.innerHTML = `
         <div class="flex justify-between items-start">
@@ -51,20 +52,20 @@ function createTopicCard(topic) {
                 <h4 class="text-lg font-bold mb-2">${topic.title}</h4>
                 <p class="text-gray-600 mb-2">${topic.description}</p>
                 <p class="text-sm text-gray-800 mb-3">Autor: ${topic.author}</p>
-                <div class="flex gap-4 text-sm text-blue-600">
+                <div class="flex gap-4 text-sm">
                     ${dadosLink && dadosLink !== 'Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados' ? 
-                        `<a href="${dadosLink}" target="_blank" class="underline hover:text-blue-800 flex items-center">
+                        `<a href="dados.html?category=${categoryName}&topic=${topicIndex}" class="text-blue-600 underline hover:text-blue-800 flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
                             Dados
                          </a>` : ''}
                     ${analiseLink && analiseLink !== 'Aqui fica o link para o repositório com a análise dos dados feita pelos alunos' ? 
-                        `<a href="${analiseLink}" target="_blank" class="underline hover:text-blue-800 flex items-center">
+                        `<a href="apresentacoes.html?category=${categoryName}&topic=${topicIndex}" class="text-green-600 underline hover:text-green-800 flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                             </svg>
-                            Análise
+                            Apresentações
                          </a>` : ''}
                 </div>
             </div>

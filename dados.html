@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Projeto - Introdução à Ciência de Dados - UFPB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-[#05202b] text-white py-6">
+        <div class="container mx-auto px-4">
+            <img src="logo-ci.jpg" alt="Logo CI" class="w-16 h-16 object-cover rounded mb-4">
+        </div>
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold">Introdução à Ciência de Dados</h1>
+            <p class="mt-2">Prof. Dr. Yuri Malheiros</p>
+            <p class="mt-2">Departamento de Computação Científica - Universidade Federal da Paraíba</p>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="index.html" class="hover:text-gray-300">Página Inicial</a></li>
+                    <li><a href="index.html#informacoes" class="hover:text-gray-300">Informações Gerais</a></li>
+                    <li><a href="index.html#trabalhos" class="hover:text-gray-300">Todas as Categorias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Navegação de Breadcrumb -->
+        <nav class="mb-6">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="index.html" class="hover:text-blue-600">Início</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li><a href="#" onclick="history.back()" class="hover:text-blue-600">Categoria</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li class="text-gray-800">Dados do Projeto</li>
+            </ol>
+        </nav>
+
+        <section>
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2" id="project-title">Dados do Projeto</h2>
+                    <p class="text-gray-600" id="project-description">Arquivos de dados utilizados neste projeto</p>
+                    <p class="text-sm text-gray-700 mt-2" id="project-author">Autor: </p>
+                </div>
+                <button onclick="history.back()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    ← Voltar
+                </button>
+            </div>
+
+            <!-- Lista de arquivos de dados -->
+            <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    Arquivos de Dados
+                </h3>
+                <div id="data-files-list" class="space-y-3">
+                    <!-- Arquivos serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Informações adicionais -->
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-medium text-blue-800">Informação sobre os dados</h3>
+                        <div class="mt-2 text-sm text-blue-700">
+                            <p>Estes são os dados utilizados no projeto. Alguns arquivos podem estar hospedados externamente no GitHub ou outras plataformas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 UFPB - Introdução à Ciência de Dados</p>
+        </div>
+    </footer>
+
+    <script src="projectsData.js"></script>
+    <script src="dados.js"></script>
+</body>
+
+</html>
