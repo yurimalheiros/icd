@@ -1,16 +1,21 @@
 // Script para página de dados
+/**
+ * Inicializa a página de dados quando o DOM estiver carregado
+ * Extrai parâmetros da URL, carrega dados do projeto e atualiza o conteúdo da página
+ */
 document.addEventListener('DOMContentLoaded', function() {
-    // Pegar parâmetros da URL
+    // Pegar parâmetros da URL (categoria e índice do tópico)
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
     const topicIndex = parseInt(urlParams.get('topic'));
     
+    // Validar parâmetros obrigatórios
     if (!category || isNaN(topicIndex)) {
         console.error('Parâmetros inválidos na URL');
         return;
     }
     
-    // Buscar dados do projeto
+    // Buscar dados do projeto no objeto projectsData
     const categoryData = projectsData[category];
     if (!categoryData || !categoryData.topics[topicIndex]) {
         console.error('Projeto não encontrado');
@@ -22,26 +27,35 @@ document.addEventListener('DOMContentLoaded', function() {
     loadDataFiles(topic);
 });
 
+/**
+ * Atualiza o conteúdo da página com informações do projeto selecionado
+ * @param {Object} topic - Dados do tópico/projeto contendo título, descrição e autor
+ * @param {string} categoryTitle - Título da categoria para exibição
+ */
 function updatePageContent(topic, categoryTitle) {
-    // Atualizar título do projeto
+    // Atualizar título do projeto no header
     const projectTitle = document.getElementById('project-title');
     if (projectTitle) {
         projectTitle.textContent = `Dados - ${topic.title}`;
     }
     
-    // Atualizar descrição
+    // Atualizar descrição do projeto
     const projectDescription = document.getElementById('project-description');
     if (projectDescription) {
         projectDescription.textContent = topic.description;
     }
     
-    // Atualizar autor
+    // Atualizar informações do autor
     const projectAuthor = document.getElementById('project-author');
     if (projectAuthor) {
         projectAuthor.textContent = `Autor(es): ${topic.author}`;
     }
 }
 
+/**
+ * Carrega e exibe os arquivos de dados disponíveis para o projeto
+ * @param {Object} topic - Dados do tópico contendo informações dos arquivos de dados
+ */
 function loadDataFiles(topic) {
     const dataFilesList = document.getElementById('data-files-list');
     if (!dataFilesList) return;
@@ -91,11 +105,18 @@ function loadDataFiles(topic) {
     }
 }
 
+/**
+ * Cria um cartão de arquivo de dados para exibir informações e opções de download
+ * @param {string} url - URL do arquivo de dados
+ * @param {string} fileName - Nome do arquivo para exibição
+ * @param {string} [description=''] - Descrição opcional do arquivo
+ * @returns {HTMLElement} - Elemento do cartão de arquivo criado
+ */
 function createDataFileCard(url, fileName, description = '') {
     const card = document.createElement('div');
     card.className = 'border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors';
     
-    // Detectar tipo de arquivo pela extensão
+    // Detectar tipo de arquivo pela extensão e gerar ícone correspondente
     const fileExtension = getFileExtension(url);
     const fileIcon = getFileIcon(fileExtension);
     const displayFileName = fileName || getFileName(url);
@@ -131,6 +152,11 @@ function createDataFileCard(url, fileName, description = '') {
     return card;
 }
 
+/**
+ * Obtém a extensão do arquivo a partir da URL
+ * @param {string} url - URL do arquivo
+ * @returns {string} - Extensão do arquivo em minúsculas, ou 'arquivo' se não for possível determinar
+ */
 function getFileExtension(url) {
     if (!url) return 'arquivo';
     const path = url.split('?')[0]; // Remove query parameters
@@ -138,6 +164,11 @@ function getFileExtension(url) {
     return extension || 'arquivo';
 }
 
+/**
+ * Obtém o nome do arquivo a partir da URL
+ * @param {string} url - URL do arquivo
+ * @returns {string} - Nome do arquivo, ou 'Arquivo desconhecido' se não for possível determinar
+ */
 function getFileName(url) {
     if (!url) return 'Arquivo desconhecido';
     const path = url.split('?')[0]; // Remove query parameters
@@ -145,6 +176,11 @@ function getFileName(url) {
     return segments[segments.length - 1] || 'Arquivo';
 }
 
+/**
+ * Obtém o tamanho estimado do arquivo (placeholder para implementação futura)
+ * @param {string} url - URL do arquivo
+ * @returns {string} - Tamanho estimado do arquivo (atualmente retorna valor padrão)
+ */
 function getFileSize(url) {
     // Placeholder para tamanho do arquivo - poderia ser implementado com fetch HEAD request
     const extension = getFileExtension(url);
@@ -157,6 +193,11 @@ function getFileSize(url) {
     return sizes[extension] || 'Tamanho variável';
 }
 
+/**
+ * Obtém o ícone de arquivo correspondente à extensão
+ * @param {string} extension - Extensão do arquivo
+ * @returns {string} - SVG do ícone correspondente à extensão do arquivo
+ */
 function getFileIcon(extension) {
     const iconClass = "w-8 h-8";
     
@@ -185,6 +226,10 @@ function getFileIcon(extension) {
     }
 }
 
+/**
+ * Copia um texto para a área de transferência
+ * @param {string} text - Texto a ser copiado
+ */
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
         showToast('URL copiada para a área de transferência!');
@@ -194,6 +239,11 @@ function copyToClipboard(text) {
     });
 }
 
+/**
+ * Exibe uma mensagem de toast (notificação) na tela
+ * @param {string} message - Mensagem a ser exibida
+ * @param {string} [type='success'] - Tipo da mensagem ('success' ou 'error')
+ */
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = `fixed top-4 right-4 px-4 py-2 rounded-md shadow-lg text-white z-50 ${
@@ -203,6 +253,7 @@ function showToast(message, type = 'success') {
     
     document.body.appendChild(toast);
     
+    // Remover toast após 3 segundos
     setTimeout(() => {
         toast.remove();
     }, 3000);

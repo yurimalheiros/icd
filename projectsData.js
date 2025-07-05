@@ -12,15 +12,15 @@ const projectsData = {
                     dados: [
                         {
                             name: "Brasileirão 2006-2024",
-                            url: "esportes/brasileirao/brasileirao_2006_2024.csv",
+                            url: "./esportes/brasileirao/brasileirao_2006_2024.csv",
                             description: "Dados do Brasileirão de 2006-2024"
                         },
                     ],
                     // Múltiplas apresentações
                     apresentacoes: [
                         {
-                            name: "Análises",
-                            url: "esportes/brasileirao/presentation.ipynb",
+                            name: "Analises brasileirao",
+                            url: "./esportes/brasileirao/presentation.ipynb",
                             description: "Análise completa dos dados do Brasileirão"
                         },
                     ]
@@ -31,39 +31,31 @@ const projectsData = {
                 description: "Dados e Análise da NBA",
                 author: "Vinicius Ferraz | João Pedro | Samuel Victor",
                 content: {
-                    // Exemplo usando objeto com nomes personalizados
-                    dados: {
-                        "temporada_2024": {
+                    // Múltiplos arquivos de dados - pode ser array ou objeto
+                    dados: [
+                        {
                             name: "NBA Temporada 2024",
-                            url: "https://github.com/Cigilo/Coleta-de-dados-nba/blob/main/NBA_Temporada_2024.xlsx",
+                            url: "./esportes/nba/NBA_Temporada_2024.xlsx",
                             description: "Dados da temporada 2024 da NBA"
-                        },
-                        "estatisticas_jogadores": {
-                            name: "Estatísticas dos Jogadores",
-                            url: "dados/nba/players_stats.csv",
-                            description: "Estatísticas detalhadas dos jogadores"
                         }
-                    },
-                    // Apresentação única (ainda funciona como antes)
-                    apresentacoes: "https://github.com/Cigilo/Coleta-de-dados-nba/blob/main/relatorio.ipynb"
+                    ],
+                    // Múltiplas apresentações
+                    apresentacoes: [
+                        {
+                            name: "Análises NBA 2024",
+                            url: "./esportes/nba/relatorio.ipynb",
+                            description: "Análise completa dos dados da NBA"
+                        }
+                    ]
                 }
-            },
+            }
         ]
     },
+
     entretenimento: {
         title: "Entretenimento",
-        topics: [
-            {
-                title: "Oscar",
-                description: "Dados e Análise do Oscar",
-                author: "nome do autor",
-                content: {
-                    dados: "Aqui fica o arquivo csv ou outro tipo de arquivo com os dados coletados",
-                    analise: "Aqui fica o link para o repositório com a análise dos dados feita pelos alunos",
-                }
-            },  
-        ]
     },
+
     musica: {
         title: "Música",
         topics: [
@@ -72,38 +64,58 @@ const projectsData = {
                 description: "Dados e Análise sobre músicas e artistas",
                 author: "Irlan Miguel | José Victor | Labert Paixão",
                 content: {
-                    dados: "https://github.com/laberttt/Music-Data-Analytics/tree/main/dataset",
-                    analise: "https://github.com/laberttt/Music-Data-Analytics/blob/main/presentation.ipynb",
+                    dados: [
+                        {
+                            name: "Dataset de Músicas youtube",
+                            url: "./musica/musicas_populares/top_tracks_youtube.csv",
+                            description: "Primeiro conjunto de dados "
+                        },
+                        {
+                            name: "Dataset de Músicas youtube top 100 por ano", 
+                            url: "./musica/musicas_populares/kworb_youtube_top100_PerYear.csv",
+                            description: "Segundo conjunto de dados"
+                        },
+                        {
+                            name: "Dataset de Músicas spotify",
+                            url: "./musica/musicas_populares/top_tracks_spotify.csv", 
+                            description: "Terceiro conjunto de dados musicais"
+                        }
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Análise musicas populares",
+                            url: "./musica/musicas_populares/presentation.ipynb",
+                            description: "Análise completa dos dados musicais"
+                        }
+                    ]
                 }
             },
-
             {
                 title: "Guitarra",
                 description: "Dados e Análise sobre sons de guitarra",
                 author: "Pedro Henrique | Igor de Melo | Erick Batista | João Vitor",
                 content: {
-                    dados: "https://github.com/PKrutaa/MusicData/blob/main/dataset_com_features.csv",
-                    analise: "https://github.com/PKrutaa/MusicData/blob/main/relat%C3%B3rio.ipynb",
+                    dados: [
+                        {
+                            name: "Dataset de Sons de Guitarra",
+                            url: "./musica/guitarra/dataset_com_features.csv",
+                            description: "Dados de sons de guitarra"
+                        }
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Relatório de Guitarra",
+                            url: "./musica/guitarra/relatório.ipynb",
+                            description: "Análise completa dos dados de sons guitarra"
+                        }
+                    ]
                 }
-
             }
-
         ]
     },
 
     social: {
-        title: "Social",
-        topics: [
-            {
-                title: "comunidade trans na paraíba",
-                description: "Dados e Análise sobre a comunidade trans na Paraíba",
-                author: "Eva Maria",
-                content: {
-                    dados: "https://drive.google.com/drive/folders/1ao_2Pih-YwhrOjCjcVPPZwfiixFk8f_p",
-                    analise: "https://github.com/evam4ria/projeto-icd2024/tree/main",
-                }
-            }
-        ]
+        
     },
 
     outros: {
@@ -114,8 +126,64 @@ const projectsData = {
                 description: "Dados e Análise sobre docentes do centro de informática da UFPB",
                 author: "Clarice Lopes, Felipe Medeiros, Vinícius Mangueira",
                 content: {
-                    dados: "https://github.com/claricelopes/dados_coleta/tree/main/captura_dados",
-                    analise: "https://github.com/claricelopes/dados_coleta/blob/main/relatorio.ipynb",
+                    dados: [
+
+                        {
+                            name: "Todos os autores",
+                            url: "./outros/docentesCI/autores_todos.csv",
+                            description: "Dados de todos os autores do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 1",
+                            url: "./outros/docentesCI/artigos_20250407_230357.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 2",
+                            url: "./outros/docentesCI/artigos_20250407_230338.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 3",
+                            url: "./outros/docentesCI/artigos_20250407_230323.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 4",
+                            url: "./outros/docentesCI/artigos_20250407_230305.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 5",
+                            url: "./outros/docentesCI/artigos_20250407_230120.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 6",
+                            url: "./outros/docentesCI/artigos_20250407_230047.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                        {
+                            name: "Dados de Docentes 7",
+                            url: "./outros/docentesCI/artigos_20250407_225939.csv",
+                            description: "Dados dos docentes do centro de informática"
+                        },
+
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Análise dos Docentes",
+                            url: "./outros/docentesCI/relatorio.ipynb",
+                            description: "Relatório completo da análise dos docentes"
+                        }
+                    ]
                 }
             },
 
@@ -124,8 +192,20 @@ const projectsData = {
                 description: "Dados e Análise sobre Documentos",
                 author: "Anne Fernandes | Matheus da Silva | Thiago Henrique",
                 content: {
-                    dados: "https://github.com/thiag0bezerra/docai/blob/master/data/processed/dataset.csv",
-                    analise: "https://github.com/thiag0bezerra/docai/blob/master/relatorio.ipynb",
+                    dados: [
+                        {
+                            name: "Dataset de Documentos",
+                            url: "./outros/documentos/dataset.csv",
+                            description: "Dados de documentos"
+                        }
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Análise de Documentos",
+                            url: "./outros/documentos/relatorio.ipynb",
+                            description: "Relatório completo da análise de documentos"
+                        }
+                    ]
                 }
             }
 
@@ -135,8 +215,7 @@ const projectsData = {
     educacao: {
         title: "Educação",
         topics: [
-            {
-            }
+            // Adicione aqui projetos relacionados à educação
         ]
     }
 };

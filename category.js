@@ -1,4 +1,8 @@
 // Script para páginas de categoria
+/**
+ * Inicializa a página de categoria quando o DOM estiver carregado
+ * Carrega os dados da categoria atual e configura todos os event listeners
+ */
 document.addEventListener('DOMContentLoaded', function() {
     // Pegar categoria da URL ou atributo data
     const categoryName = document.body.dataset.category;
@@ -14,20 +18,24 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
 });
 
+/**
+ * Atualiza o conteúdo da página com os dados da categoria selecionada
+ * @param {Object} categoryData - Dados da categoria contendo título e tópicos
+ */
 function updatePageContent(categoryData) {
-    // Atualizar título da categoria
+    // Atualizar título da categoria no header principal
     const categoryTitle = document.getElementById('category-title');
     if (categoryTitle) {
         categoryTitle.textContent = categoryData.title;
     }
     
-    // Atualizar breadcrumb
+    // Atualizar breadcrumb de navegação
     const breadcrumbCategory = document.getElementById('breadcrumb-category');
     if (breadcrumbCategory) {
         breadcrumbCategory.textContent = categoryData.title;
     }
     
-    // Popular tópicos
+    // Popular grid de tópicos com os projetos da categoria
     const topicsGrid = document.getElementById('topics-grid');
     if (topicsGrid) {
         topicsGrid.innerHTML = '';
@@ -39,10 +47,18 @@ function updatePageContent(categoryData) {
     }
 }
 
+/**
+ * Cria um card HTML para exibir um tópico/projeto da categoria
+ * @param {Object} topic - Dados do tópico contendo título, descrição, autor e conteúdo
+ * @param {number} topicIndex - Índice do tópico na lista para navegação
+ * @param {string} categoryName - Nome da categoria para construir URLs
+ * @returns {HTMLElement} Elemento div com o card do tópico formatado
+ */
 function createTopicCard(topic, topicIndex, categoryName) {
     const card = document.createElement('div');
     card.className = 'bg-white shadow-md rounded-lg p-6 mb-4';
 
+    // Extrair links de dados e análises/apresentações do conteúdo
     const dadosLink = topic.content?.dados || '';
     const analiseLink = topic.content?.analise || topic.content?.apresentacoes || '';
 
@@ -74,22 +90,28 @@ function createTopicCard(topic, topicIndex, categoryName) {
     return card;
 }
 
+/**
+ * Configura todos os event listeners da página de categoria
+ * Inclui funcionalidades do modal e teclas de atalho
+ */
 function setupEventListeners() {
-    // Modal
+    // Configurar modal de projetos
     const modal = document.getElementById('project-modal');
     const closeModal = document.getElementById('close-modal');
     
+    // Event listener para botão de fechar modal
     if (closeModal) {
         closeModal.addEventListener('click', hideModal);
     }
     
+    // Event listener para fechar modal clicando fora dele
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) hideModal();
         });
     }
 
-    // Fechar modal com ESC
+    // Event listener para fechar modal com tecla ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
             hideModal();
@@ -97,6 +119,10 @@ function setupEventListeners() {
     });
 }
 
+/**
+ * Esconde o modal de projetos adicionando a classe 'hidden'
+ * Função auxiliar para fechar o modal em diferentes cenários
+ */
 function hideModal() {
     const modal = document.getElementById('project-modal');
     if (modal) {

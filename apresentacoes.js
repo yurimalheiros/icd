@@ -1,19 +1,22 @@
 // Script para página de apresentações
+/**
+ * Inicializa a página de apresentações quando o DOM estiver carregado
+ * Extrai parâmetros da URL, carrega dados do projeto e atualiza o conteúdo da página
+ */
 document.addEventListener('DOMContentLoaded', function() {
-    // Pegar parâmetros da URL
+    // Pegar parâmetros da URL (categoria e índice do tópico)
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
     const topicIndex = parseInt(urlParams.get('topic'));
     
+    // Validar parâmetros obrigatórios
     if (!category || isNaN(topicIndex)) {
-        console.error('Parâmetros inválidos na URL');
         return;
     }
     
-    // Buscar dados do projeto
+    // Buscar dados do projeto no objeto projectsData
     const categoryData = projectsData[category];
     if (!categoryData || !categoryData.topics[topicIndex]) {
-        console.error('Projeto não encontrado');
         return;
     }
     
@@ -22,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPresentationFiles(topic);
 });
 
+/**
+ * Atualiza o conteúdo da página com informações do projeto selecionado
+ * @param {Object} topic - Dados do tópico/projeto contendo título, descrição e autor
+ * @param {string} categoryTitle - Título da categoria para exibição
+ */
 function updatePageContent(topic, categoryTitle) {
     // Atualizar título do projeto
     const projectTitle = document.getElementById('project-title');
@@ -42,6 +50,10 @@ function updatePageContent(topic, categoryTitle) {
     }
 }
 
+/**
+ * Carrega os arquivos de apresentação na página
+ * @param {Object} topic - Dados do tópico contendo informações dos arquivos de apresentação
+ */
 function loadPresentationFiles(topic) {
     const presentationFilesList = document.getElementById('presentation-files-list');
     if (!presentationFilesList) return;
@@ -90,7 +102,7 @@ function loadPresentationFiles(topic) {
         });
     }
     
-    // Adicionar event listeners para botões de download
+    // Adicionar event listeners para botões de download após criação dos cards
     setTimeout(() => {
         const downloadButtons = document.querySelectorAll('.download-btn');
         downloadButtons.forEach(button => {
@@ -101,7 +113,6 @@ function loadPresentationFiles(topic) {
                 const url = this.getAttribute('data-url');
                 const filename = this.getAttribute('data-filename');
                 
-                console.log('Botão clicado, iniciando download:', url, filename);
                 downloadFile(url, filename);
                 
                 return false;
@@ -110,6 +121,13 @@ function loadPresentationFiles(topic) {
     }, 100);
 }
 
+/**
+ * Cria um cartão de apresentação para exibir informações e opções de download de um arquivo de apresentação
+ * @param {string} url - URL do arquivo de apresentação
+ * @param {string} fileName - Nome do arquivo para exibição
+ * @param {string} [description=''] - Descrição opcional do arquivo
+ * @returns {HTMLElement} - Elemento do cartão de apresentação criado
+ */
 function createPresentationFileCard(url, fileName, description = '') {
     const card = document.createElement('div');
     card.className = 'border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors';
@@ -150,6 +168,11 @@ function createPresentationFileCard(url, fileName, description = '') {
     return card;
 }
 
+/**
+ * Obtém a extensão do arquivo a partir da URL
+ * @param {string} url - URL do arquivo
+ * @returns {string} - Extensão do arquivo em minúsculas, ou 'arquivo' se não for possível determinar
+ */
 function getFileExtension(url) {
     if (!url) return 'arquivo';
     const path = url.split('?')[0]; // Remove query parameters
@@ -157,6 +180,11 @@ function getFileExtension(url) {
     return extension || 'arquivo';
 }
 
+/**
+ * Obtém o nome do arquivo a partir da URL
+ * @param {string} url - URL do arquivo
+ * @returns {string} - Nome do arquivo, ou 'Arquivo desconhecido' se não for possível determinar
+ */
 function getFileName(url) {
     if (!url) return 'Arquivo desconhecido';
     const path = url.split('?')[0]; // Remove query parameters
@@ -164,6 +192,11 @@ function getFileName(url) {
     return segments[segments.length - 1] || 'Arquivo';
 }
 
+/**
+ * Obtém o tipo de apresentação com base na extensão do arquivo
+ * @param {string} extension - Extensão do arquivo
+ * @returns {string} - Tipo de apresentação correspondente à extensão, ou 'Documento' se a extensão não for reconhecida
+ */
 function getPresentationType(extension) {
     const types = {
         'ipynb': 'Jupyter Notebook',
@@ -175,6 +208,11 @@ function getPresentationType(extension) {
     return types[extension] || 'Documento';
 }
 
+/**
+ * Obtém o ícone de arquivo de apresentação com base na extensão do arquivo
+ * @param {string} extension - Extensão do arquivo
+ * @returns {string} - SVG do ícone correspondente à extensão do arquivo
+ */
 function getPresentationFileIcon(extension) {
     const iconClass = "w-8 h-8";
     
@@ -206,8 +244,12 @@ function getPresentationFileIcon(extension) {
     }
 }
 
+/**
+ * Faz o download de um arquivo a partir de sua URL
+ * @param {string} url - URL do arquivo a ser baixado
+ * @param {string} fileName - Nome do arquivo para o download
+ */
 function downloadFile(url, fileName) {
-    console.log('Função downloadFile chamada:', url, fileName);
     
     // Criar link simples para download
     const link = document.createElement('a');
@@ -217,8 +259,6 @@ function downloadFile(url, fileName) {
     
     // Adicionar ao DOM
     document.body.appendChild(link);
-    
-    console.log('Iniciando download:', fileName);
     
     // Simular clique
     link.click();
@@ -231,15 +271,23 @@ function downloadFile(url, fileName) {
     }, 100);
 }
 
+/**
+ * Copia um texto para a área de transferência
+ * @param {string} text - Texto a ser copiado
+ */
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
         showToast('URL copiada para a área de transferência!');
     }, function(err) {
-        console.error('Erro ao copiar: ', err);
         showToast('Erro ao copiar URL', 'error');
     });
 }
 
+/**
+ * Exibe uma mensagem de toast (notificação) na tela
+ * @param {string} message - Mensagem a ser exibida
+ * @param {string} [type='success'] - Tipo da mensagem ('success' ou 'error')
+ */
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = `fixed top-4 right-4 px-4 py-2 rounded-md shadow-lg text-white z-50 ${
