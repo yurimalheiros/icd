@@ -129,53 +129,10 @@ const projectsData = {
                     dados: [
 
                         {
-                            name: "Todos os autores",
-                            url: "./outros/docentesCI/autores_todos.csv",
+                            name: "Dados de Docentes",
+                            url: "./outros/docentesCI/dados.zip",
                             description: "Dados de todos os autores do centro de informática"
                         },
-
-                        {
-                            name: "Dados de Docentes 1",
-                            url: "./outros/docentesCI/artigos_20250407_230357.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 2",
-                            url: "./outros/docentesCI/artigos_20250407_230338.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 3",
-                            url: "./outros/docentesCI/artigos_20250407_230323.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 4",
-                            url: "./outros/docentesCI/artigos_20250407_230305.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 5",
-                            url: "./outros/docentesCI/artigos_20250407_230120.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 6",
-                            url: "./outros/docentesCI/artigos_20250407_230047.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
-                        {
-                            name: "Dados de Docentes 7",
-                            url: "./outros/docentesCI/artigos_20250407_225939.csv",
-                            description: "Dados dos docentes do centro de informática"
-                        },
-
                     ],
                     apresentacoes: [
                         {
