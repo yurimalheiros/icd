@@ -1,4 +1,4 @@
-/* Estilos para os cards de categoria */
+
 .category-card {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -9,12 +9,12 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Classe utilitária para ocultar elementos */
+
 .hidden {
     display: none;
 }
 
-/* Animação de fade in */
+
 .fade-in {
     animation: fadeIn 0.5s ease-in;
 }
@@ -30,7 +30,7 @@
     }
 }
 
-/* Estilo do botão de voltar */
+
 .back-button {
     transition: all 0.3s ease;
 }
@@ -39,7 +39,7 @@
     background-color: #0369a1;
 }
 
-/* Estilo do modal */
+
 .modal {
     backdrop-filter: blur(5px);
 }
@@ -61,7 +61,7 @@
     }
 }
 
-/* Melhorias visuais */
+
 .topic-card .bg-blue-600 {
     transition: background-color 0.3s ease;
 }
@@ -70,7 +70,7 @@
     background-color: #1d4ed8;
 }
 
-/* Estilo para tags de ferramentas */
+
 .tool-tag {
     background-color: #f3f4f6;
     color: #374151;
@@ -81,7 +81,7 @@
     margin: 0.125rem;
 }
 
-/* Scroll suave para elementos internos do modal */
+
 #modal-content {
     scroll-behavior: smooth;
 }

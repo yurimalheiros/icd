@@ -27,6 +27,29 @@ const projectsData = {
                 }
             },
             {
+                title: "Formula-1",
+                description: "Dados e Análise da Formula-1",
+                author: "Renan Sinesio | Vynicios Daniel | Yosef Joseph",
+                content: {
+                    // Múltiplos arquivos de dados - pode ser array ou objeto
+                    dados: [
+                        {
+                            name: "formula 1",
+                            url: "./esportes/formula1/csvs.zip",
+                            description: "Dados da formula 1"
+                        }
+                    ],
+                    // Múltiplas apresentações
+                    apresentacoes: [
+                        {
+                            name: "Análises Formula 1",
+                            url: "./esportes/formula1/relatorio.ipynb",
+                            description: "Análise de dados da formula 1"
+                        }
+                    ]
+                }
+            },
+            {
                 title: "NBA",
                 description: "Dados e Análise da NBA",
                 author: "Vinicius Ferraz | João Pedro | Samuel Victor",
@@ -45,6 +68,29 @@ const projectsData = {
                             name: "Análises NBA 2024",
                             url: "./esportes/nba/relatorio.ipynb",
                             description: "Análise completa dos dados da NBA"
+                        }
+                    ]
+                }
+            },
+            {
+                title: "UFC",
+                description: "Dados e Análise do UFC",
+                author: "Diego de Sousa | João Rafael | João Vitor Chaves | Nathan David",
+                content: {
+                    // Múltiplos arquivos de dados - pode ser array ou objeto
+                    dados: [
+                        {
+                            name: "UFC",
+                            url: "./esportes/ufc/lutadores.csv",
+                            description: "Dados dos lutadores do UFC"
+                        }
+                    ],
+                    // Múltiplas apresentações
+                    apresentacoes: [
+                        {
+                            name: "Análises UFC",
+                            url: "./esportes/ufc/relatorio.ipynb",
+                            description: "Análise dos dados do UFC"
                         }
                     ]
                 }
@@ -115,7 +161,31 @@ const projectsData = {
     },
 
     social: {
-        
+        title: "Social",
+        topics: [
+            {
+                title: "Dados da criminalidade em João Pessoa",
+                description: "Dados e Análise sobre a criminalidade em João Pessoa",
+                author: "Jonatas Miguel, Ana Beatriz, João Victor, Thiago Marques",
+                content: {
+                    dados: [
+
+                        {
+                            name: "Dados de Criminalidade em João Pessoa",
+                            url: "./social/criminalidade/dados.zip",
+                            description: "Dados de todos os autores do centro de informática"
+                        },
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Análise dos Dados",
+                            url: "./social/criminalidade/relatorio.ipynb",
+                            description: "Relatório completo da análise da criminalidade em João Pessoa"
+                        }
+                    ]
+                }
+            },
+        ]
     },
 
     outros: {
@@ -124,26 +194,37 @@ const projectsData = {
             {
                 title: "Dados academicos dos docentes do centro de informática",
                 description: "Dados e Análise sobre docentes do centro de informática da UFPB",
-                author: "Clarice Lopes, Felipe Medeiros, Vinícius Mangueira",
+                author: `Clarice Lopes, Felipe Medeiros, Vinícius Mangueira | 2024.2<br>
+                         Sarah Fernanda, Luiz Carlos Veloso, Sofia Pontes, Cauã Henrique | 2025.2`,
                 content: {
                     dados: [
 
                         {
                             name: "Dados de Docentes",
-                            url: "./outros/docentesCI/dados.zip",
-                            description: "Dados de todos os autores do centro de informática"
+                            url: "./outros/docentesCI/dados_2024.2.zip",
+                            description: "Dados de todos os autores do centro de informática |periodo 2024.2"
+                        },
+                        {
+                            name: "Dados do lattes dos docentes do Ci",
+                            url: "./outros/docentesCI/data_2025.1.zip",
+                            description: "Dados do Lattes dos docentes do centro de informática |periodo 2025.1"
                         },
                     ],
                     apresentacoes: [
                         {
                             name: "Análise dos Docentes",
-                            url: "./outros/docentesCI/relatorio.ipynb",
+                            url: "./outros/docentesCI/relatorio_2024.2.ipynb",
                             description: "Relatório completo da análise dos docentes"
+                        },
+                        {
+                            name: "Análise do Lattes dos Docentes",
+                            url: "./outros/docentesCI/notebook_relatorio_2025.1.ipynb",
+                            description: "Relatório da análise do Lattes dos Docentes do Centro de Informática"
                         }
                     ]
                 }
             },
-
+            
             {
                 title: "Documentos",
                 description: "Dados e Análise sobre Documentos",
@@ -161,6 +242,27 @@ const projectsData = {
                             name: "Análise de Documentos",
                             url: "./outros/documentos/relatorio.ipynb",
                             description: "Relatório completo da análise de documentos"
+                        }
+                    ]
+                }
+            },
+            {
+                title: "Steam",
+                description: "Dados e Análise sobre os jogos mais populares da Steam",
+                author: "Samuel Santos | Pedro Henrique | Leonardo Filho | Sean Lucas",
+                content: {
+                    dados: [
+                        {
+                            name: "Dataset dos jogos da Steam",
+                            url: "./outros/steam/data.zip",
+                            description: "Dados dos jogos da Steam"
+                        }
+                    ],
+                    apresentacoes: [
+                        {
+                            name: "Analise sobre os jogos populares da steam(2019-2024)",
+                            url: "./outros/steam/relatorio.ipynb",
+                            description: "Relatório da análise dos jogos mais populares da steam"
                         }
                     ]
                 }
