@@ -31,4 +31,4 @@ Semestre atual: 2025.2
 
 ## Projetos
 
-Em breve... esse semestre vai ser diferente
+[Veja os projetos dos semestres anteriores](https://yurimalheiros.github.io/icd)
