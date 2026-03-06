@@ -8,7 +8,7 @@ const projectsData = {
                 description: "Dados e Análise do brasileirão",
                 author: "Dennynson Scheydt| Matias Monteiro | Vinícius da Silva | João Matheus ",
                 content: {
-                    // Múltiplos arquivos de dados - pode ser array ou objeto
+
                     dados: [
                         {
                             name: "Brasileirão 2006-2024",
@@ -16,7 +16,7 @@ const projectsData = {
                             description: "Dados do Brasileirão de 2006-2024"
                         },
                     ],
-                    // Múltiplas apresentações
+
                     apresentacoes: [
                         {
                             name: "Analises brasileirao",
@@ -31,7 +31,7 @@ const projectsData = {
                 description: "Dados e Análise da Formula-1",
                 author: "Renan Sinesio | Vynicios Daniel | Yosef Joseph",
                 content: {
-                    // Múltiplos arquivos de dados - pode ser array ou objeto
+
                     dados: [
                         {
                             name: "formula 1",
@@ -39,7 +39,7 @@ const projectsData = {
                             description: "Dados da formula 1"
                         }
                     ],
-                    // Múltiplas apresentações
+
                     apresentacoes: [
                         {
                             name: "Análises Formula 1",
@@ -54,7 +54,7 @@ const projectsData = {
                 description: "Dados e Análise da NBA",
                 author: "Vinicius Ferraz | João Pedro | Samuel Victor",
                 content: {
-                    // Múltiplos arquivos de dados - pode ser array ou objeto
+
                     dados: [
                         {
                             name: "NBA Temporada 2024",
@@ -62,7 +62,7 @@ const projectsData = {
                             description: "Dados da temporada 2024 da NBA"
                         }
                     ],
-                    // Múltiplas apresentações
+
                     apresentacoes: [
                         {
                             name: "Análises NBA 2024",
@@ -77,7 +77,7 @@ const projectsData = {
                 description: "Dados e Análise do UFC",
                 author: "Diego de Sousa | João Rafael | João Vitor Chaves | Nathan David",
                 content: {
-                    // Múltiplos arquivos de dados - pode ser array ou objeto
+
                     dados: [
                         {
                             name: "UFC",
@@ -85,7 +85,7 @@ const projectsData = {
                             description: "Dados dos lutadores do UFC"
                         }
                     ],
-                    // Múltiplas apresentações
+
                     apresentacoes: [
                         {
                             name: "Análises UFC",
@@ -274,7 +274,6 @@ const projectsData = {
     educacao: {
         title: "Educação",
         topics: [
-            // Adicione aqui projetos relacionados à educação
         ]
     }
 };
