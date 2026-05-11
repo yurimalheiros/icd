@@ -29,6 +29,11 @@ Semestre atual: 2026.1
 - [Correlação](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Correlação.ipynb)
 - [Regressão Linear](https://github.com/yurimalheiros/icd/blob/master/Exerc%C3%ADcio%20-%20Regressão%20Linear.ipynb)
 
+## Livros recomendados
+
+- Data Science Design Manual (Steven Skiena)
+- Data Science Do Zero (Joel Grus)
+
 ## Projetos
 
 [Veja os projetos finais da disciplina](https://yurimalheiros.github.io/icd)
