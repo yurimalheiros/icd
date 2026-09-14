@@ -35,5 +35,5 @@ Semestre atual: 2026.2
 
 ## Livros
 
-- The Data Science Design Manual, Steven S. Skiena
-- Data Science do Zero, Joel Grus
+- The Data Science Design Manual (2017), Steven S. Skiena
+- Data Science do Zero (2016), Joel Grus
