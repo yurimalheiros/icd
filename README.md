@@ -32,3 +32,8 @@ Semestre atual: 2026.2
 ## Projetos
 
 [Veja os projetos finais da disciplina](https://yurimalheiros.github.io/icd)
+
+## Livros
+
+- The Data Science Design Manual, Steven S. Skiena
+- Data Science do Zero, Joel Grus
